@@ -1,3 +1,18 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = git@github.com:vim-scripts/taglist.vim.git
+[submodule "bundle/Colour-Sampler-Pack"]
+	path = bundle/Colour-Sampler-Pack
+	url = git@github.com:vim-scripts/Colour-Sampler-Pack.git
+[submodule "bundle/STL-improved"]
+	path = bundle/STL-improved
+	url = git@github.com:vim-scripts/STL-improved.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git@github.com:ervandew/supertab.git
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = git@github.com:Lokaltog/vim-powerline.git
