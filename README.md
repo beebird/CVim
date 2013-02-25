@@ -7,9 +7,9 @@ This project is my presonal vim configuration and just primer. I will very happy
 * * *
 I do some customization in my vim's plugin
 
-* use code_complete plugin instead of c.snippets (snipMate plugin)
+* The snipMate conflict with code_complete. so I use xpttemplate instead of snipMate and keep the code_complete.
 
-* add some custom template in code_complete/plugin/code_complete.vim 
+* Add some custom template in code_complete/plugin/code_complete.vim 
 
 
 # Install
