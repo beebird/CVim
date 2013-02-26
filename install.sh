@@ -15,10 +15,10 @@
 echo "Install vim configuration"
 
 echo "create .vimrc and .gvimrc"
-rm ~/.vimrc
-rm ~/.gvimrc
-ln -S ~/.vim/vimrc ~/.vimrc
-ln -S ~/.vim/gvimrc ~/.gvimrc
+rm -f ~/.vimrc
+rm -f ~/.gvimrc
+ln -s ~/.vim/vimrc  ~/.vimrc
+ln -s ~/.vim/gvimrc ~/.gvimrc
 
 echo "update submodule"
 git submodule init
