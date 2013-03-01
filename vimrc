@@ -57,10 +57,10 @@ filetype plugin indent on
 "前面都可以添加行数
 "加上行注释
 nmap ,cc <leader>cc  
-"取消注释
-nmap ,cu <leader>cu
 "加上块注释
 nmap ,cm <leader>cm
+"取消注释
+nmap ,cu <leader>cu
 
 "}}}
 
@@ -131,3 +131,7 @@ let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
 let g:pydiction_menu_height = 20
 "}}}
 
+"pyclewn"{{{
+"set the console window height
+set previewheight=6
+"}}}
