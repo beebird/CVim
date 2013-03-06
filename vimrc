@@ -134,4 +134,13 @@ let g:pydiction_menu_height = 20
 "pyclewn"{{{
 "set the console window height
 set previewheight=6
+
+nmap <f5>    :Pyclewn<cr>
+nmap <C-f5>  :Crun<cr>
+nmap <S-f10> :Cnext<cr>
+nmap <S-f11> :Cstep<cr>
+nmap <A-q>	 :Cquit<cr>
+nmap <C-b>   :Cbreak  
+nmap <S-f>   :Cfile 
+nmap <A-v>   :Cdbgvar 
 "}}}
