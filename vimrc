@@ -1,9 +1,9 @@
 "common {{{
-set nu
+"set nu
 set nocp
 set mouse=a
 set laststatus=2 "总是显示状态行,要想使用Powerline就必须打开这个
-set cursorline   "高亮当前行
+"set cursorline   "高亮当前行
 set autoread     "文件在vim之外修改，自动重新读入
 set hls		     "检索高亮显示
 set autoindent
@@ -144,3 +144,32 @@ nmap <C-b>   :Cbreak
 nmap <S-f>   :Cfile 
 nmap <A-v>   :Cdbgvar 
 "}}}
+"
+"
+"
+"
+"Differs from my original settings
+set helplang=cn
+nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-_>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nnoremap <silent> <F12> :A<CR>
+"set foldmethod=indent
+filetype plugin indent on
+if v:version >=700
+    set completeopt=longest,menu
+endif
+set fileencodings=utf-8,gb18030,ucs-bom,default
+set tags=./tags,./../tags,./*/tags
+"nnoremap <silent> <F8> :Tlisttoggle<CR>
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+let g:miniBufExplMapWindowNavArrows=1
+"nnoremap <F9> :!%:p
+nnoremap <leader>r :!%:p<CR>
+"nnoremap <F3> :TlistToggle<CR>
+
