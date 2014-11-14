@@ -1,7 +1,6 @@
 "common {{{
 "set nu
 set nocp
-set mouse=a
 set laststatus=2 "总是显示状态行,要想使用Powerline就必须打开这个
 "set cursorline   "高亮当前行
 set autoread     "文件在vim之外修改，自动重新读入
@@ -25,18 +24,23 @@ vmap <C-c> "+y
 
 colorscheme desert 
 
-"设置折叠方式(manual, indent, expr, syntax, diff, marker)
-"zc 折叠
-"zo 展开折叠
-"[z 到当前打开的折叠的开始处
-"]z 到当前打开的折叠的末尾处
-"zj 向下移动到下一个折叠的开始处
-"zk 向下移动到前一个折叠的结束处
-"zm 折叠所有
-"zr 打开所有折叠
-set foldmethod=syntax
-setlocal foldlevel=10        " 设置折叠层数为10
-"set foldclose=all           " 设置为自动关闭折叠                            
+if v:version >= 500
+	set mouse=a	"对VI 无效
+
+	"设置折叠方式(manual, indent, expr, syntax, diff, marker)
+	"zc 折叠
+	"zo 展开折叠
+	"[z 到当前打开的折叠的开始处
+	"]z 到当前打开的折叠的末尾处
+	"zj 向下移动到下一个折叠的开始处
+	"zk 向下移动到前一个折叠的结束处
+	"zm 折叠所有
+	"zr 打开所有折叠
+	set foldmethod=syntax
+	setlocal foldlevel=10        " 设置折叠层数为10
+	"set foldclose=all           " 设置为自动关闭折叠                            
+endif
+
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 "使用空格键打开关闭折叠
 
@@ -172,4 +176,8 @@ let g:miniBufExplMapWindowNavArrows=1
 "nnoremap <F9> :!%:p
 nnoremap <leader>r :!%:p<CR>
 "nnoremap <F3> :TlistToggle<CR>
+
+"FOR VimWiki
+set nocompatible
+filetype plugin on
 
